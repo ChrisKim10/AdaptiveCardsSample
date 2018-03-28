@@ -1,0 +1,22 @@
+﻿<Window x:Class="AdaptiveCardSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdaptiveCardSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbInput" Grid.Column="0" Margin="5,5,5,30" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        <Button x:Name="btGenerate" Grid.Column="0" Content="view" VerticalAlignment="Bottom" Click="btGenerate_Click"></Button>
+        <Grid Name="cardGrid" Grid.Column="1" MaxWidth="700" VerticalAlignment="Top" Margin="10" Background="WhiteSmoke" >
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="2" RenderingBias="Quality" Direction="-90"/>
+            </Grid.Effect>
+        </Grid>
+    </Grid>
+</Window>
